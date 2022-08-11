@@ -1,0 +1,10 @@
+D:\utilities\debezium-camel-demo\user\src\main\java\com\redhat\debezium\demo\user\domain\OrderDTO.java
+D:\utilities\debezium-camel-demo\user\src\main\java\com\redhat\debezium\demo\user\service\UserService.java
+D:\utilities\debezium-camel-demo\user\src\main\java\com\redhat\debezium\demo\DemoApplication.java
+D:\utilities\debezium-camel-demo\user\src\main\java\com\redhat\debezium\demo\user\domain\User.java
+D:\utilities\debezium-camel-demo\user\src\main\java\com\redhat\debezium\demo\user\controller\UserRestController.java
+D:\utilities\debezium-camel-demo\user\src\main\java\com\redhat\debezium\demo\user\repository\StringListConverter.java
+D:\utilities\debezium-camel-demo\user\src\main\java\com\redhat\debezium\demo\user\configuration\SwaggerConfig.java
+D:\utilities\debezium-camel-demo\user\src\main\java\com\redhat\debezium\demo\user\configuration\UserBootConfiguration.java
+D:\utilities\debezium-camel-demo\user\src\main\java\com\redhat\debezium\demo\user\service\UserServiceImpl.java
+D:\utilities\debezium-camel-demo\user\src\main\java\com\redhat\debezium\demo\user\repository\UserRepository.java

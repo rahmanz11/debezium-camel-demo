@@ -1,0 +1,4 @@
+com\redhat\debezium\MyRouteBuilder.class
+com\redhat\debezium\BeforeStructToOrderTranslator.class
+com\redhat\debezium\AfterStructToOrderTranslator.class
+com\redhat\debezium\MainApp.class

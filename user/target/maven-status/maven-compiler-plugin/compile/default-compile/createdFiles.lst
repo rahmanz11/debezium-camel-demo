@@ -1,0 +1,10 @@
+com\redhat\debezium\demo\user\repository\StringListConverter.class
+com\redhat\debezium\demo\user\controller\UserRestController.class
+com\redhat\debezium\demo\user\domain\User.class
+com\redhat\debezium\demo\user\service\UserServiceImpl.class
+com\redhat\debezium\demo\DemoApplication.class
+com\redhat\debezium\demo\user\configuration\UserBootConfiguration.class
+com\redhat\debezium\demo\user\configuration\SwaggerConfig.class
+com\redhat\debezium\demo\user\domain\OrderDTO.class
+com\redhat\debezium\demo\user\service\UserService.class
+com\redhat\debezium\demo\user\repository\UserRepository.class
