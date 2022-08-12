@@ -26,11 +26,11 @@ public class MyRouteBuilder extends RouteBuilder {
 //                .setBody(constant("${body}")) //constant("Message from Camel")          // Message to send
 //                .setHeader(KafkaConstants.KEY, constant("Camel")) // Key of the message
                 .to("kafka:test?brokers=localhost:29092")
-                //.to("rest-swagger:http://localhost:8082/v2/api-docs#addOrderUsingPOST")
+                .to("rest-swagger:http://localhost:8082/v2/api-docs#addOrderUsingPOST")
                 .endChoice()
                 .when(header(DebeziumConstants.HEADER_OPERATION).isEqualTo("d"))
                 .process(new BeforeStructToOrderTranslator())
-                //.to("rest-swagger:http://localhost:8082/v2/api-docs#deleteOrderUsingDELETE")
+                .to("rest-swagger:http://localhost:8082/v2/api-docs#deleteOrderUsingDELETE")
 //                .setBody(constant("${body}")) //constant("Message from Camel")          // Message to send
 //                .setHeader(KafkaConstants.KEY, constant("Camel")) // Key of the message
                 .to("kafka:test?brokers=localhost:29092")

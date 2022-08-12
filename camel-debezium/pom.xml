@@ -53,13 +53,18 @@
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-main</artifactId>
     </dependency>
-      <dependency>
-          <groupId>org.apache.camel</groupId>
-          <artifactId>camel-debezium-mysql</artifactId>
-      </dependency>
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-debezium-mysql</artifactId>
+    </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-debezium-sqlserver</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.microsoft.sqlserver</groupId>
+      <artifactId>mssql-jdbc</artifactId>
+      <version>9.2.1.jre11</version>
     </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
