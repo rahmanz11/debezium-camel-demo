@@ -3,6 +3,7 @@ package com.redhat.debezium;
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.debezium.DebeziumConstants;
+import org.apache.camel.component.kafka.KafkaConstants;
 
 /**
  * A Camel Java DSL Router
@@ -22,11 +23,17 @@ public class MyRouteBuilder extends RouteBuilder {
                 .choice()
                 .when(header(DebeziumConstants.HEADER_OPERATION).isEqualTo("c"))
                 .process(new AfterStructToOrderTranslator())
-                .to("rest-swagger:http://localhost:8082/v2/api-docs#addOrderUsingPOST")
+//                .setBody(constant("${body}")) //constant("Message from Camel")          // Message to send
+//                .setHeader(KafkaConstants.KEY, constant("Camel")) // Key of the message
+                .to("kafka:test?brokers=localhost:29092")
+                //.to("rest-swagger:http://localhost:8082/v2/api-docs#addOrderUsingPOST")
                 .endChoice()
                 .when(header(DebeziumConstants.HEADER_OPERATION).isEqualTo("d"))
                 .process(new BeforeStructToOrderTranslator())
-                .to("rest-swagger:http://localhost:8082/v2/api-docs#deleteOrderUsingDELETE")
+                //.to("rest-swagger:http://localhost:8082/v2/api-docs#deleteOrderUsingDELETE")
+//                .setBody(constant("${body}")) //constant("Message from Camel")          // Message to send
+//                .setHeader(KafkaConstants.KEY, constant("Camel")) // Key of the message
+                .to("kafka:test?brokers=localhost:29092")
                 .otherwise()
                 .log("Header : ${headers}")
                 .log("Body: ${body}");
